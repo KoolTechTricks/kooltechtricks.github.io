@@ -1,0 +1,22 @@
+@import "/styles/headers.css";
+@import "/styles/links.css";
+@import "/styles/lists.css";
+
+
+body {
+    background-color: #fdfdfd;
+    background-image: url();
+    margin: 0;
+}
+
+body.no-scroll {
+    overflow: hidden
+}
+
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #242424;
+        background-image: url();
+    }
+}

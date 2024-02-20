@@ -1,0 +1,119 @@
+.navbar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    overflow: hidden;
+    background-image: url();
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.navbar a:hover {
+    background-color: #efefef;
+}
+
+.navbar a.emphasized {
+    background-color: #1f89f5;
+    color: white;
+}
+
+.navbar form {
+    float: right;
+}
+
+.navbar input {
+    float: right;
+    padding: 13px 16px;
+    font-size: 24px;
+}
+
+.navbar input[type=text] {
+    background-color: #ffffff;
+    border: 1px solid #8b8b8b;
+    border-right-style: none;
+    width: 300px;
+}
+
+.navbar input[type=submit] {
+    background-image: url('/icons/search.svg');
+    background-position: 13px 13px;
+    background-repeat: no-repeat;
+    padding-left: 40px;
+    background-color: #ffffff;
+    border: 1px solid #8b8b8b;
+    width: 61px;
+    cursor: pointer;
+}
+
+.navbar-button {
+    display: none;
+}
+
+@media screen and (max-width: 720px) {
+    .navbar form.hidden {
+        display: none;
+    }
+
+    .navbar-button {
+        display: block;
+        float: right;
+        padding: 13px 16px;
+        font-size: 24px;
+        cursor: pointer;
+        background-image: url('/icons/more.svg');
+        background-position: 13px 13px;
+        background-repeat: no-repeat;
+        padding-left: 40px;
+        background-color: #ffffff;
+        border: 1px solid #8b8b8b;
+        width: 61px;
+        height: 61px;
+    }
+
+    .navbar input[type=text] {
+        width: 50vw;
+    }
+}
+
+
+@media (prefers-color-scheme: dark) {
+    .navbar {
+        background-color: #212121;
+        border-color: #4d4d4d;
+        background-image: url();
+    }
+
+    .navbar a {
+        color: #f0f0f0;
+    }
+
+    .navbar a.inactive:hover {
+        background-color: #1a1a1a;
+        color: white;
+    }
+
+    .navbar input[type=text] {
+        background-color: #212121;
+        border-color: #5c5c5c;
+        color: #f0f0f0;
+    }
+
+    .navbar input[type=submit] {
+        background-image: url('/icons/search_light.svg');
+        background-color: #212121;
+        border-color: #5c5c5c;
+    }
+
+    .navbar-button {
+        background-image: url('/icons/more_light.svg');
+        background-color: #212121;
+        border-color: #5c5c5c;
+    }
+}

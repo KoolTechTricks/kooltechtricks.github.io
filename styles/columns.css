@@ -1,0 +1,138 @@
+.row {
+    position: relative;
+    margin: auto;
+    max-width: 960px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.column {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    padding: 12px;
+    padding-top: 0;
+}
+
+.column.side {
+    float: left;
+    width: 246px;
+    margin-left: -282px;
+    position: sticky;
+    top: 1em;
+    max-height: calc(100vh - 10vw);
+    overflow: auto;
+}
+
+.column.side.hidden {
+    display: none;
+}
+
+.sidebar-button {
+    display: none;
+}
+
+@media screen and (max-width: 1549px) {
+    .row {
+        display: flex;
+        margin: 12px;
+        max-width: 1244px;
+    }
+    
+    .row.hidden {
+        position: relative;
+        margin: auto;
+        max-width: 960px;
+        margin-top: 12px;
+        margin-bottom: 12px;
+    }
+    
+    .column.middle {
+        margin-left: 12px;
+        max-width: 960px;
+        flex-grow: 1;
+    }
+    
+    .column.middle {
+        margin-left: 12px;
+        max-width: 960px;
+        flex-grow: 1;
+    }
+    
+    .column.side {
+        margin: 0;
+        min-width: 246px;
+        align-self: start;
+    }
+}
+
+@media screen and (max-width: 988px) {
+    .row {
+        display: inline;
+        margin: 0;
+        margin-top: 12px;
+        margin-bottom: 12px;
+    }
+
+    .column.middle {
+        margin: 0;
+        margin-top: 12px;
+        margin-bottom: 12px;
+        border-left-style: none;
+        border-right-style: none;
+    }
+    
+    .column.side {
+        display: none;
+    }
+
+    .column.side.visible {
+        display: inline-block;
+        shape-outside: linear-gradient(transparent,transparent);
+        z-index: 1;
+        top: 12px;
+        left: 66px;
+    }
+
+    .sidebar-button {
+        display: inline-block;
+        position: sticky;
+        cursor: pointer;
+        background-color: #ffffff;
+        border: 1px solid #e0e0e0;
+        top: 12px;
+        z-index: 1;
+        max-height: 42px;
+        padding: 4px;
+        margin-right: 12px;
+        margin-top: 12px;
+    }
+
+    .sidebar-button.hidden {
+        display: none;
+        position: sticky;
+        cursor: pointer;
+        background-color: #ffffff;
+        border: 1px solid #e0e0e0;
+        top: 12px;
+        z-index: 1;
+        max-height: 42px;
+        padding: 4px;
+    }
+}
+
+
+@media (prefers-color-scheme: dark) {
+    .column {
+        background-color: #212121;
+        border-color: #4d4d4d;
+    }
+
+    .sidebar-button {
+        background-color: #212121;
+        border-color: #4d4d4d;
+    }
+
+    .sidebar-button img {
+        filter: invert(100%);
+    }
+}
